@@ -45,7 +45,9 @@
 .area-input div{
   width: 100%;
   height: 46px;
-  background-color: rgb(255,255,255, 0.15);
+  background-color: rgb(255,255,255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
