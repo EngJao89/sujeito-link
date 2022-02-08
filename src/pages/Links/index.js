@@ -33,16 +33,15 @@ export default function Links() {
     setShowModal(true);
   }
 
-  async function handleDeleteLink(id){
+  async function handleDelete(id){
     const result = await deleteLink(myLinks, id);
 
     if(result.length === 0){
-      alert('No links found');
-      setEmptyList(true);
+        setEmptyList(true);
     }
 
-    setMyLinks(result);
-  }
+    setMyLinks(result)
+}
 
   return (
     <div className="links-container">
@@ -59,7 +58,7 @@ export default function Links() {
             <FiLink size={18} color="#fff" />
             {link.long_url}
           </button>
-          <button className="link-delete" onClick={ () => handleDeleteLink(link)}>
+          <button className="link-delete" onClick={ () => handleDelete(link.id) }>
             <FiTrash size={24} color="#FF3434" />
           </button>
         </div>
